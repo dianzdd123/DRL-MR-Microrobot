@@ -4,6 +4,8 @@
 
 ## Start here
 
+**Repository:** [dianzdd123/DRL-MR-Microrobot](https://github.com/dianzdd123/DRL-MR-Microrobot)
+
 This repository is a fork of [YudongMao/DRL-MR-Microrobot](https://github.com/YudongMao/DRL-MR-Microrobot). Original authorship, citations and upstream notices are retained. Changes here apply to this fork.
 
 **Scope:** Research scripts across Unity, Isaac Sim and image-based environments; there is no single installation command.
