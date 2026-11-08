@@ -1,5 +1,20 @@
 # Reinforcement Learning Navigation and Mixed Reality Operation for Magnetic Micro-Robots
 
+## Start here
+
+This repository is a fork of [YudongMao/DRL-MR-Microrobot](https://github.com/YudongMao/DRL-MR-Microrobot). Original authorship, citations and upstream notices are retained. Changes here apply to this fork.
+
+**Scope:** Research scripts across Unity, Isaac Sim and image-based environments; there is no single installation command.
+
+| Need | Where to start |
+|---|---|
+| Setup, file map, inputs/outputs and troubleshooting | [Reuse guide](docs/REUSE.md) |
+| Local structural validation | `python scripts/check_repository.py` (Python 3.10+) |
+| Proposed fixes and reproducibility details | [Contributing](CONTRIBUTING.md) |
+
+The structural check does not run experiments or certify hardware, model accuracy or dependency compatibility. Reuse permissions need clarification: this checkout has no repository-wide licence file.
+
+
 This repository contains the code for remote operation of micro-robots using HOLOLENS 2, developed on the Unity platform, as well as reinforcement learning navigation code for micro-robots in Isaac Sim and custom simulation environments.
 
 # Overview
@@ -10,7 +25,7 @@ To address these challenges, we propose a Deep Reinforcement Learning-Based Semi
 
 # Installation
 
-1. This experiment is developed based on the Unity Mixed Reality Tool Kir. The official website provides detailed installation guidance  
+1. This experiment is developed based on the Unity Mixed Reality Toolkit. The official website provides detailed installation guidance
    https://learn.microsoft.com/en-us/windows/mixed-reality/mrtk-unity/mrtk2/?view=mrtkunity-2022-05
 
 2. The Micro-manipulator uses Sensapex devices  
@@ -22,7 +37,7 @@ To address these challenges, we propose a Deep Reinforcement Learning-Based Semi
 3. Magnetic field and force calculations in this experiment use the Magpylib library  
    `pip install magpylib`
 
-4. The reinforcement learning navigation task implemented in the Isaac Sim environment uses PyTorch 12.1, including DQN and DDPG  
+4. The reinforcement learning navigation task implemented in the Isaac Sim environment uses PyTorch 1.12.1, including DQN and DDPG
 
    `pip install torch==1.12.1 torchvision==0.13.1 torchaudio==0.12.1 --index-url https://download.pytorch.org/whl/cpu`
 
@@ -161,7 +176,12 @@ ppo_params = {
 ```
 
 Training  
-`python ./Reinforcement Learning/Isaac Sim/PPO.py`
+Run from the algorithm directory after configuring its scene paths:
+
+```bash
+cd "Reinforcement Learning/Isaac Sim/PPO"
+python ppo.py
+```
 
 # Future Work
 
